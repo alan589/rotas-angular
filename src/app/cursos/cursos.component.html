@@ -1,0 +1,37 @@
+<h3>Página de cursos</h3>
+<p>página: {{ pagina }}</p>
+<!-- <div class="collection">
+  <a class="collection-item"
+  *ngFor="let curso of cursos"
+  [routerLink]="['/curso', curso.id]"
+  (mouseover)="mouseOver($event)"
+  (mouseout)="mouseOut($event)"
+  >
+    {{ curso.nome }}
+  </a>
+</div> -->
+
+<!-- <div class="collection">
+  <a class="collection-item"
+  *ngFor="let curso of cursos"
+  [routerLink]="['/curso', curso.id]"
+  (mouseover)="cursoMouseOver = curso.nome"
+  (mouseout)="cursoMouseOver = ''"
+  [class.active]="cursoMouseOver === curso.nome"
+  >
+    {{ curso.nome }}
+  </a>
+</div> -->
+
+<div class="collection">
+  <a class="collection-item"
+  *ngFor="let curso of cursos"
+  [routerLink]="['/curso', curso.id]"
+  highlightMouse
+  >
+    {{ curso.nome }}
+  </a>
+</div>
+
+
+<button (click)="proximaPagina()" type="button">Próxima página</button>
