@@ -7,20 +7,21 @@ import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from "./app.routing.module";
 import { CursosModule } from "./cursos/cursos.module";
+import { AlunosModule } from "./alunos/alunos.module";
 
-import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
+// import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
-    HighlightMouseDirective
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     CursosModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlunosModule
   ],
   bootstrap: [AppComponent]
 })
