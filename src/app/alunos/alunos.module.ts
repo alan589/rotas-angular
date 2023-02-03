@@ -5,8 +5,9 @@ import { AlunosComponent } from "./alunos.component";
 import { AlunoFormComponent } from "./aluno-form/aluno-form.component";
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosService } from "./alunos.service";
-
+import { AlunosDesativarGuard } from "../guards/alunos-desativar.guard";
 import { AlunosRoutingModule } from './alunos-routing.module';
+import { AlunoDetalheResolver } from "./guards/aluno-detalhe.resolver";
 // import { HighlightMouseDirective } from '../shared/highlight-mouse.directive';
 
 
@@ -23,7 +24,9 @@ import { AlunosRoutingModule } from './alunos-routing.module';
     FormsModule
   ],
   providers: [
-     AlunosService
+     AlunosService,
+     AlunosDesativarGuard,
+     AlunoDetalheResolver
   ]
 })
 export class AlunosModule { }
